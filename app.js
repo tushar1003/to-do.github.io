@@ -7,6 +7,7 @@ const app=express();
 
 var items=[];
 var workItems=[];
+const port=process.env.PORT || 5000
 
 app.set("view engine","ejs");
 
@@ -58,6 +59,6 @@ app.get("/work",function(req,res){
 // })
 
 
-app.listen(3000,function(){
+app.listen(port ,function(){
     console.log("Server started on port 3000");
 }); 
